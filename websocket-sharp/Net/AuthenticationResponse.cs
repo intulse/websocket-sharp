@@ -188,7 +188,7 @@ namespace WebSocketSharp.Net
         }
       }
 
-      Parameters["method"] = "GET";
+      Parameters["method"] = "REGISTER";
       Parameters["response"] = CreateRequestDigest (Parameters);
     }
 

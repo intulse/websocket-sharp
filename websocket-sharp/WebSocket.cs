@@ -1988,7 +1988,15 @@ namespace WebSocketSharp
 
       return true;
     }
+    public string getDigest(string chal)
+    {
+        _authChallenge = AuthenticationChallenge.Parse(chal);
+        _nonceCount = 00000002;
 
+        var authRes = new AuthenticationResponse(_authChallenge, _credentials, _nonceCount);
+        _nonceCount = authRes.NonceCount;
+        return authRes.ToString();
+    }
     // As client
     private HttpResponse sendHandshakeRequest ()
     {

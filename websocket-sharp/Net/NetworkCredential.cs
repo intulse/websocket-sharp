@@ -142,7 +142,7 @@ namespace WebSocketSharp.Net
         return _domain ?? String.Empty;
       }
 
-      internal set {
+      set {
         _domain = value;
       }
     }
